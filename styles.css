@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgb(0, 0, 0, 0.3), transparent),
+    url(/images/background.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding: 0 8%;
+}
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+.logo {
+  color: #fff;
+  width: 120px;
+  cursor: pointer;
+  font-family: monospace;
+}
+nav h1 span {
+  font-size: 40px;
+  font-family: cursive;
+}
+.cart-icon {
+  width: 30px;
+  cursor: pointer;
+}
+nav ul {
+  flex: 1;
+  text-align: right;
+  padding-right: 30px;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 30px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  transition: width 0.3s;
+}
+nav ul li a:hover::after {
+  width: 50%;
+}
+.text-box {
+  color: #fff;
+  position: absolute;
+  bottom: 8%;
+}
+.text-box p {
+  font-size: 50px;
+  font-weight: 600;
+}
+.text-box h1 {
+  font-size: 190px;
+  line-height: 160px;
+  margin-left: -10px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background: url(/images/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+
+@keyframes back {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+
+.text-box h3 {
+  font-size: 40px;
+  font-weight: 500;
+}
+.text-box .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.text-box a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+}
+.text-box a span {
+  font-size: 30px;
+  line-height: 15px;
+  margin-left: 5px;
+}
+.social-icons {
+  position: absolute;
+  right: 5%;
+  bottom: 8%;
+}
+.social-icons img {
+  width: 25px;
+  display: block;
+  margin: 25px 5px;
+}
+
+@media (max-width: 767px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.3), transparent),
+      url(/images/background.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 0 5%; /* Adjusted padding for smaller screens */
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0; /* Increased padding for better spacing */
+  }
+
+  .logo {
+    color: #fff;
+    width: 100%; /* Full width for smaller screens */
+    text-align: center; /* Center align for smaller screens */
+    cursor: pointer;
+    font-family: monospace;
+  }
+
+  nav h1 span {
+    font-size: 30px; /* Reduced font size for smaller screens */
+    font-family: cursive;
+  }
+
+  .cart-icon {
+    width: 30px;
+    cursor: pointer;
+  }
+
+  nav ul {
+    width: 100%; /* Full width for smaller screens */
+    text-align: center; /* Center align for smaller screens */
+    padding: 10px 0; /* Increased padding for better spacing */
+  }
+
+  nav ul li {
+    display: block; /* Display as block for better stacking */
+    list-style: none;
+    margin: 10px 0; /* Adjusted margin for better spacing */
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    display: inline-block; /* Display as inline-block for better stacking */
+  }
+
+  nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: width 0.3s;
+  }
+
+  nav ul li a:hover::after {
+    width: 50%;
+  }
+
+  .text-box {
+    color: #fff;
+    position: absolute;
+    bottom: 8%;
+    text-align: center; /* Center align for smaller screens */
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .text-box p {
+    font-size: 30px; /* Reduced font size for smaller screens */
+    font-weight: 600;
+  }
+
+  .text-box h1 {
+    font-size: 100px; /* Reduced font size for smaller screens */
+    line-height: 100px; /* Reduced line-height for smaller screens */
+    margin-left: 0; /* Adjusted margin for better positioning */
+    -webkit-text-stroke: 1px #fff;
+    background: url(/images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+  }
+
+  @keyframes back {
+    100% {
+      background-position: 2000px 0;
+    }
+  }
+
+  .text-box h3 {
+    font-size: 30px; /* Reduced font size for smaller screens */
+    font-weight: 500;
+  }
+
+  .text-box .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px; /* Adjusted margin for better spacing */
+  }
+
+  .text-box a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 10px auto; /* Center align and adjusted margin for better spacing */
+    display: inline-block; /* Display as inline-block for better stacking */
+    border: 2px solid #fff;
+  }
+
+  .text-box a span {
+    font-size: 20px; /* Reduced font size for smaller screens */
+    line-height: 15px;
+    margin-left: 5px;
+  }
+
+  .social-icons {
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+  }
+
+  .social-icons img {
+    width: 20px; /* Reduced image size for smaller screens */
+    display: inline-block; /* Display as inline-block for better stacking */
+    margin: 10px 5px; /* Adjusted margin for better spacing */
+  }
+
+  @media (max-width: 767px) {
+    nav ul li {
+      margin: 5px 0; /* Adjusted margin for better spacing */
+    }
+
+    nav ul li a::after {
+      bottom: -3px; /* Adjusted position for better alignment */
+    }
+  }
+}
